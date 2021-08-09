@@ -14,7 +14,6 @@ cc.Class({
     onLoad: function () {
         window["GD_OPTIONS"] = {
             "gameId": "75c8d40f998d4099832a973d533105cc",
-            // "loader": { enabled: true },
             "onEvent": function (event) {
                 switch (event.name) {
                     case "SDK_GAME_START":
