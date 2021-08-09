@@ -52,6 +52,14 @@ cc.Class({
             gdsdk.showAd('rewarded');
         }
     },
+    GDShowDisplayAd: function () {
+        if (typeof gdsdk !== 'undefined' && gdsdk.showAd !== 'undefined') {
+            gdsdk
+                .showAd(window.gdsdk.AdType.Display, { containerId: "CONTAINER_ID_TO_PUT_AD_IN" })
+                .then(() => console.info('showAd(window.gdsdk.AdType.Display) resolved.'))
+                .catch(error => console.info(error));
+        }
+    },
 
     // called every frame
     update: function (dt) {
